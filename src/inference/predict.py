@@ -1,4 +1,4 @@
-"""inference.py
+"""predict.py
 """
 
 from __future__ import annotations
@@ -43,7 +43,7 @@ def scorer():
   return Scorer()
 
 
-def predict_pure_premium(policy: Policy) -> Decision:
+def predict_loss_cost(policy: Policy) -> Decision:
     policy_df = pd.DataFrame([policy.dict()], columns = policy.dict().keys())
     feature_df = buid_features(policy_df)
     loss_cost = scorer().score(feature_df)
