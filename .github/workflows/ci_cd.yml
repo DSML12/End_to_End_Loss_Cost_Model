@@ -29,14 +29,12 @@ jobs:
 
       - name: Build, Tag, and Push image
         run: |
-          IMAGE_TAG=v1
-          REPO=mymodel
-          docker build -t $ACR_REGISTRY/$REPO:$IMAGE_TAG -f Dockerfile .
-          docker push $ACR_REGISTRY/$REPO:$IMAGE_TAG
+          docker build -t $ACR_REGISTRY/mymodel:${{ github.sha }} -f Dockerfile .
+          docker push $ACR_REGISTRY/mymodel:${{ github.sha }}
 
       - name: Deploy to Container Apps
         run: |
           az containerapp update \
             --name $CONTAINER_APP \
             --resource-group $RESOURCE_GROUP \
-            --image $ACR_REGISTRY/mymodel:v1
+            --image $ACR_REGISTRY/mymodel:${{ github.sha }}
