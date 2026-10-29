@@ -24,8 +24,13 @@ The model is loaded once from Azure Blob Storage and cached for the lifetime of 
 │   ├── api/main.py           
 │   ├── inference/predict.py  
 │   ├── features.py           
-│   ├── storage.py            
-│   └── config.py             
+│   ├── storage.py
+|   ├── monitoring
+|       ├── drift.py
+|       ├── run_unlabeled.py
+|       └── run_labeled.py     
+│   └── config.py
+|            
 ├── Dockerfile
 ├── requirements.txt
 └── .github/workflows/ci_cd.yml
@@ -74,6 +79,14 @@ curl -X POST http://localhost:8000/predict \
 ```bash
 docker build -t loss-cost-model .
 docker run -p 8000:8000 loss-cost-model
+```
+## Monitoring
+
+Two jobs, split by whether ground truth has matured:
+
+```bash
+python -m src.monitoring.run_unlabeled   # PSI/CSI — no labels needed
+python -m src.monitoring.run_labeled     # Mean Tweedie Deviance — needs labels
 ```
 
 ## Deployment
