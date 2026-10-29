@@ -3,6 +3,7 @@
 
 import numpy as np
 import pandas as pd
+from src.config import Config
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
 
@@ -38,7 +39,7 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
   df['bm_to_licage'] = df['bm_centered'] / df['licage_years']
   df['bm_to_age'] = df['bm_centered'] / df['DrivAge']
 
-  df['VehUsage_lgb'] = df['VehUsage_lgb'].astype('category')
+  df['VehUsage_lgb'] = df['VehUsage'].astype('category')
 
   features = Config().feature_columns
   df = df[features]

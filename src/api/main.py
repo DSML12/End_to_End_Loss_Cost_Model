@@ -31,11 +31,11 @@ class PredictResponse(BaseModel):
 def health():
     return {'status': 'ok'}
 
-@app.post('/predict'):
+@app.post('/predict')
 def predict(req: PredictRequest):
-    resonse = predict_loss_cost(Policy(req.RiskArea, 
+    response = predict_loss_cost(Policy(req.RiskArea, 
                                        req.BonusMalus,
                                        req.DrivAge,
                                        req.LicAge,
-                                       req.vehUsage))
+                                       req.VehUsage))
     return PredictResponse(loss_cost = response.loss_cost)
