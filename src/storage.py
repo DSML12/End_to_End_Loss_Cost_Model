@@ -33,7 +33,7 @@ class ModelStore:
 
     def download_data(self, dest: str) -> str:
         with open(dest, "wb") as f:
-            self.container.get_blob_client(self.s.data_key).download_blob().readinto(f)
+            self.container.get_blob_client(self.config.data_key).download_blob().readinto(f)
         return dest
 
     def upload_model(self, model_str) -> None:

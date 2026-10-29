@@ -16,4 +16,4 @@ class Config:
 
     model_key = os.getenv('MODEL_KEY', 'loss_cost_lgbm.txt')
     azure_container = os.getenv('AZURE_CONTAINER', 'models')
-    azure_storage_account_name = os.getenv('AZURE_STOAGE_ACCOUNT_NAME', 'purepremst')
+    azure_storage_account_name = os.getenv('AZURE_STORAGE_ACCOUNT_NAME', 'purepremst')

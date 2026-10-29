@@ -11,7 +11,7 @@ from functools import lru_cache
 from src.features import buid_features
 from src.config import Config
 
-# define the policy and decision data classesclasses
+# define the policy and decision data classes
 @dataclass
 class Policy:
     RiskArea: float
