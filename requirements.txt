@@ -1,0 +1,11 @@
+lightgbm == 4.5
+scikit-learn == 1.5
+scipy == 1.13
+numpy == 1.26
+pandas == 2.2
+pydantic == 2.13
+azure-identity == 1.19
+azure-storage-blob == 12.24
+fastapi == 0.115
+uvicorn == 0.34
+streamlit == 1.56
