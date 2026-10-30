@@ -13,6 +13,8 @@ UI ──► FastAPI (/predict) ──► Feature engineering ──► LightGBM
 
 The model is loaded once from Azure Blob Storage and cached for the lifetime of the process.
 
+## Demo
+
 <img width="626" height="572" alt="Screenshot 2026-10-29 4 40 25 PM" src="https://github.com/user-attachments/assets/2bdc12d4-78c2-47cb-b2c3-56308bdabc2f" />
 
 
