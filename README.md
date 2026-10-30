@@ -18,8 +18,7 @@ The model is loaded once from Azure Blob Storage and cached for the lifetime of 
 
 ## Project Structure
 
-```
-├── app.py                    
+```                 
 ├── src/
 │   ├── api/main.py           
 │   ├── inference/predict.py  
@@ -28,9 +27,10 @@ The model is loaded once from Azure Blob Storage and cached for the lifetime of 
 |   ├── monitoring
 |       ├── drift.py
 |       ├── run_unlabeled.py
-|       └── run_labeled.py     
+|       └── run_labeled.py
+|   ├── notebook/End_to_End_Loss_Cost_Modeling_LGBM_GLM.ipynb
 │   └── config.py
-|            
+├── app.py       
 ├── Dockerfile
 ├── requirements.txt
 └── .github/workflows/ci_cd.yml
