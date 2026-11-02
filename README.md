@@ -30,7 +30,9 @@ The model is loaded once from Azure Blob Storage and cached for the lifetime of 
 |       ├── drift.py
 |       ├── run_unlabeled.py
 |       └── run_labeled.py
-|   ├── notebook/End_to_End_Loss_Cost_Modeling_LGBM_GLM.ipynb
+|   ├── notebook
+|        ├── End_to_End_Loss_Cost_Modeling_LGBM_GLM.ipynb
+|        └── End_to_End_Loss_Cost_Model_Azure_ML_Deploy.ipynb
 │   └── config.py
 ├── app.py       
 ├── Dockerfile
