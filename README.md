@@ -1,6 +1,6 @@
 # End-to-End Loss Cost Model
 
-A Tweedie LightGBM model that predicts annual loss cost, deployed to Azure Container Apps and served through a FastAPI endpoint.
+A Tweedie LightGBM model that predicts annual loss cost, deployed to both Azure Machine Learning and Azure Container Apps and served through a FastAPI endpoint.
 
 
 ## Architecture
