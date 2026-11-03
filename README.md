@@ -1,6 +1,6 @@
 # End-to-End Loss Cost Model
 
-A Tweedie LightGBM model that predicts annual loss cost, deployed to Azure Machine Learning, Azure Container Apps (ACA) and AWS SageMaker and served through a FastAPI endpoint (ACA).
+A Tweedie LightGBM model that predicts annual loss cost, deployed to Azure Machine Learning, Azure Container Apps (ACA), served through a FastAPI endpoint, and AWS SageMaker.
 
 
 ## Architecture
